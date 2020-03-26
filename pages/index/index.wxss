@@ -1,0 +1,44 @@
+/**index.wxss**/
+
+/**搜索框**/
+.bx{
+  width: 100%;
+}
+
+.btn-search{
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.pannel{
+  margin: 0 40rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ccc;
+} 
+.pannel-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pannel-title{
+  flex: 1;
+  font-size: 32rpx;
+  line-height: 46rpx;
+}
+
+.pannel-img{
+  height: 138rpx;
+  width: 220rpx;
+  padding-left: 26rpx;
+}
+
+.pannel-footer{
+  margin-top: 10rpx;
+  font-size: 20rpx;
+  color: #ababab;
+  line-height: 20rpx;
+}
+
+.pannel-footer text{
+  padding-right: 20rpx;
+} 
