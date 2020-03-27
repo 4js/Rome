@@ -1,20 +1,31 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/article/article",
+    "pages/movie/movie"
   ],
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "/image/a.png",
-      "selectedIconPath": "/image/as.png"
-    }, {
-      "pagePath": "pages/logs/logs",
-      "text": "我的",
-      "iconPath": "/image/d.png",
-      "selectedIconPath": "/image/ds.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/image/a.png",
+        "selectedIconPath": "/image/as.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "放映厅",
+        "iconPath": "/image/c.png",
+        "selectedIconPath": "/image/cs.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "/image/d.png",
+        "selectedIconPath": "/image/ds.png"
+      }
+    ]
   },
   "window": {
     "backgroundTextStyle": "light",

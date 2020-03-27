@@ -32,6 +32,16 @@
   padding-left: 26rpx;
 }
 
+.img-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-wrapper .img-item{
+  width: 220rpx;
+  height: 140rpx;
+}
+
 .pannel-footer{
   margin-top: 10rpx;
   font-size: 20rpx;

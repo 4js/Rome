@@ -1,0 +1,25 @@
+<!--pages/content.wxml-->
+<view class="container">
+	<!-- <van-nav-bar class="top-nav-bar" left-text="返回" title="头条" left-arrow fixed border>
+	</van-nav-bar> -->
+	<view class="main-wrapper">
+		<view class="title">四川1416个重大项目集中开工总投资7142亿元</view>
+		<view class="author-box">
+			<view class="left">
+				<image src="https://img.yzcdn.cn/public_files/2017/12/18/fd78cf6bb5d12e2a119d0576bedfd230.png" />
+				<view class="author">
+					<view class="name">四川经济网</view>
+					<view class="desc">11小时前 四川经济网官方账号</view>
+				</view>
+			</view>
+			<van-button class="btn-watch" type="primary" size="mini">关注</van-button>
+		</view>
+		<view class="content">
+			<view class="p">新华社成都3月26日电（记者胡旭）26日，四川省举行2020年第一季度重大项目集中开工活动，开工重大项目共计1416个、总投资7142亿元。其中，基础设施项目395个、总投资2067亿元；产业项目694个、总投资3408亿元；民生及社会事业项目210个、总投资779亿元；其他项目117个、总投资888亿元。</view>
+			<view class="p">四川是西部经济大省，在积极做好疫情防控的基础上，该省大力推动补短板，积极扩大有效投资。此次集中开工项目中，涉及公路交通项目共46个，总长939公里，总投资508亿元。同时，从全部投资项目的主体来看，民间投资项目684个，总投资3710亿元，超过全部项目总投资额的50%。</view>
+			<view class="p">一批影响力大、带动力强的项目开工，将为四川转变经济发展方式、优化经济结构和转换增长动能提供支撑。如成都市投资100亿元的鸿富成智能穿戴产品研发制造基地、62亿元的西部文创之芯总部、60亿元的雪松西南总部项目，以及中国电子信息产业集团泸州产业园、德阳凯州新城中金众联（凯州）电子信息产业园等。</view>
+			<view class="p">据悉，下一步，四川将抓紧下达用好疫情防控专项补助，推动重大项目复工强度尽快恢复到正常水平，并进一步优化审批服务、加强要素保障，加大重点项目储备，加快新项目开工，及时协调解决项目建设存在的困难和问题，推动全省固定资产投资持续平稳增长。</view>
+			<view class="read-number">18万阅读</view>
+		</view>
+	</view>
+</view>
