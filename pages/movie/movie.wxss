@@ -1,1 +1,49 @@
 /* pages/movie/movie.wxss */
+
+.movie-box{
+    width: 100%;
+    padding: 20rpx;
+    border-bottom: 2rpx solid #f0f2f5;
+}
+
+.movie-box .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rpx;
+}
+
+.movie-box .header .title{
+    padding-right: 32rpx;
+    font-size: 26rpx;
+    line-height: 40rpx;
+    color: #333;
+}
+.movie-box .header .movie-tag{
+    margin-right: 18rpx;
+}
+
+.movie-box .header .desc{
+    font-size: 20rpx;
+    line-height: 36rpx;
+    color: #ccc;
+}
+
+.movie-box .con{
+    width: 100%;
+    position: relative;
+}
+
+.movie-box .play-circle{
+    font-size: 100rpx;
+    color: #f0f2f5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50rpx;
+    margin-left: -50rpx;
+}
+
+.movie-box .con image{
+    width: 100%;
+}

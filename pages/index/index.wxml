@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <van-search
-    class="bx"
+    class="bx search-box"
     value="{{ value }}"
     placeholder="请输入搜索内容"
     use-action-slot
@@ -11,14 +11,15 @@
   >
     <van-icon class="btn-search" name="scan" slot="action"/>
   </van-search>
-  <van-tabs animated sticky class="bx" color="rgb(79, 192, 141)" bind:change="changeTab">
-    <van-tab title="关注">
-      <news-list list-data="{{newsList}}"></news-list>
-    </van-tab>
+  <van-tabs animated sticky class="bx tab-box" color="rgb(79, 192, 141)" bind:change="changeTab">
+    <van-tab title="关注"></van-tab>
     <van-tab title="推荐"></van-tab>
     <van-tab title="热点"></van-tab>
     <van-tab title="扶贫"></van-tab>
     <van-tab title="政策"></van-tab>
     <van-tab title="技术"></van-tab>
   </van-tabs>
+  <view class="news-list-box">
+    <news-list list-data="{{newsList}}"></news-list>
+  </view>
 </view>

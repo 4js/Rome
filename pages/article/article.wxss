@@ -16,7 +16,7 @@
 }
 
 .title{
-    font-size: 32rpx;
+    font-size: 36rpx;
     color: #333;
     line-height: 48rpx;
     margin-bottom: 20rpx;
@@ -57,13 +57,13 @@
     margin-top: 30rpx;
 }
 .content .p{
-    font-size: 28rpx;
-    line-height: 54rpx;
-    margin-bottom: 8rpx;
+    font-size: 30rpx;
+    line-height: 50rpx;
     color: #34495e;
 }
 
 .content .read-number{
+    margin-top: 40rpx;
     font-size: 18rpx;
     color: #ccc;
 }

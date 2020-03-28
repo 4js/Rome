@@ -1,8 +1,20 @@
 /**index.wxss**/
 
 /**搜索框**/
-.bx{
+
+.search-box{
+  position: fixed;
+  top: 0;
+}
+
+.tab-box{
+  position: fixed;
+  top: 108rpx;
+}
+
+.news-list-box{
   width: 100%;
+  padding-top: 200rpx;
 }
 
 .btn-search{

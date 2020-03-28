@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-03-28 12:02:04
- * @LastEditTime: 2020-03-28 12:05:55
- * @LastEditors: your name
+ * @LastEditTime: 2020-03-28 13:41:02
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Rome\components\news-list\news-list.js
  */
@@ -14,7 +14,7 @@ Component({
   properties: {
     listData: {
       type: Array,
-      value: [],
+      value: []
     }
   },
 
@@ -22,7 +22,15 @@ Component({
    * 组件的初始数据
    */
   data: {
+    loading: true
+  },
 
+  observers: {
+    'listData': function (val) {
+      val.length && this.setData({
+        loading: false
+      })
+    }
   },
 
   /**

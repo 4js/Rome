@@ -1,0 +1,46 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+	<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+	<block wx:else>
+		<view class="user-wrapper">
+			<view class="left">
+				<van-image
+					round
+					class="user-logo"
+					width="60px"
+					height="60px"
+					src="{{userInfo.avatarUrl}}"
+					/>
+					<view>
+						<view class="username">{{userInfo.nickName}}</view>
+						<view class="desc">{{userInfo.province}} {{userInfo.city}}</view>
+					</view>
+			</view>
+			<van-button round size="mini" type="info">去认证</van-button>
+		</view>
+		<view class="divider"></view>
+		<view class="grid-title">常用工具</view>
+		<van-grid class="grid" square border="{{false}}">
+			<van-grid-item icon="volume-o" text="消息通知"/>
+			<van-grid-item icon="envelop-o" text="私信"/>
+			<van-grid-item icon="star-o" text="收藏"/>
+			<van-grid-item icon="clock-o" text="浏览历史"/>
+			<van-grid-item icon="sign" text="作品管理"/>
+			<van-grid-item icon="comment-o" text="评论"/>
+			<van-grid-item icon="gem-o" text="超级会员"/>
+			<van-grid-item icon="setting-o" text="系统设置"/>
+		</van-grid>
+		<view class="divider"></view>
+		<view class="grid-title">常用工具</view>
+		<van-grid class="grid" square border="{{false}}">
+			<van-grid-item icon="volume-o" text="消息通知"/>
+			<van-grid-item icon="envelop-o" text="私信"/>
+			<van-grid-item icon="star-o" text="收藏"/>
+			<van-grid-item icon="clock-o" text="浏览历史"/>
+			<van-grid-item icon="sign" text="作品管理"/>
+			<van-grid-item icon="comment-o" text="评论"/>
+			<van-grid-item icon="gem-o" text="超级会员"/>
+			<van-grid-item icon="setting-o" text="系统设置"/>
+		</van-grid>
+	</block>
+</view>

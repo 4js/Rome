@@ -1,2 +1,19 @@
 <!--pages/movie/movie.wxml-->
-<text>pages/movie/movie.wxml</text>
+<view class="container">
+    <view class="movie-box" wx:for="{{4}}" wx:key="item">
+        <view class="header">
+            <view>
+                <view>
+                    <text class="title">三傻大闹宝莱坞</text>
+                    <van-tag plain class="movie-tag">爱情</van-tag><van-tag plain class="movie-tag">喜剧</van-tag>
+                </view>
+                <view class="desc">兄弟情谊深如水合伙行走江湖 陈坤/刘德华</view>
+            </view>
+            <van-icon name="wap-nav" />
+        </view>
+        <view class="con">
+            <van-icon class="play-circle" name="play-circle" />
+            <image src="https://image.cnhnb.com/image/png/miniapp/2020/03/18/906f8c9ffd294bd1904440c7c5077e34.png" mode="widthFix" lazy-load="true"></image>
+        </view>
+    </view>
+</view>

@@ -1,7 +1,7 @@
 <!--
  * @Author: 4js
  * @Date: 2020-03-26 19:08:11
- * @LastEditTime: 2020-03-26 19:14:29
+ * @LastEditTime: 2020-03-28 15:47:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Rome\README.md
@@ -11,6 +11,8 @@
 小程序
 
 罗马：农业行业资讯类微信小程序，仿头条
+
+> 主题颜色色值-#4caf50
 
 ### 功能设计
 

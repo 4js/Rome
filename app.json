@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/article/article",
-    "pages/movie/movie"
+    "pages/movie/movie",
+    "pages/mine/mine"
   ],
   "tabBar": {
     "list": [
@@ -11,19 +12,19 @@
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "/image/a.png",
-        "selectedIconPath": "/image/as.png"
+        "selectedIconPath": "/image/ah.png"
       },
       {
         "pagePath": "pages/movie/movie",
-        "text": "放映厅",
-        "iconPath": "/image/c.png",
-        "selectedIconPath": "/image/cs.png"
+        "text": "短视频",
+        "iconPath": "/image/b.png",
+        "selectedIconPath": "/image/bh.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/mine/mine",
         "text": "我的",
-        "iconPath": "/image/d.png",
-        "selectedIconPath": "/image/ds.png"
+        "iconPath": "/image/c.png",
+        "selectedIconPath": "/image/ch.png"
       }
     ]
   },
