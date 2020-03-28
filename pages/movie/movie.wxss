@@ -47,3 +47,15 @@
 .movie-box .con image{
     width: 100%;
 }
+
+/* 分享 */
+.share-row{
+    width: 100%;
+}
+.share-col{
+    width: 30%;
+}
+
+.van-grid-item__content{
+    padding-top: 60rpx;
+}

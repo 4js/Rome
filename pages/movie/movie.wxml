@@ -9,11 +9,34 @@
                 </view>
                 <view class="desc">兄弟情谊深如水合伙行走江湖 陈坤/刘德华</view>
             </view>
-            <van-icon name="wap-nav" />
+            <van-icon name="wap-nav" bindtap="showShare"/>
         </view>
         <view class="con">
             <van-icon class="play-circle" name="play-circle" />
             <image src="https://image.cnhnb.com/image/png/miniapp/2020/03/18/906f8c9ffd294bd1904440c7c5077e34.png" mode="widthFix" lazy-load="true"></image>
         </view>
     </view>
+    <van-popup
+        show="{{ show }}"
+        closeable
+        round
+        close-icon="close"
+        position="bottom"
+        custom-style="height: 20%"
+        bind:close="onClose">
+        <van-grid clickable column-num="2" border="{{false}}">
+            <van-grid-item
+                icon="free-postage"
+                link-type="navigateTo"
+                url="/pages/index/index"
+                text="微信好友"
+            />
+            <van-grid-item
+                icon="hot-o"
+                link-type="reLaunch"
+                url="/pages/index/index"
+                text="朋友圈"
+            />
+        </van-grid>
+    </van-popup>
 </view>
