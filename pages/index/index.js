@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-26 14:15:37
- * @LastEditTime: 2020-03-26 18:09:27
+ * @LastEditTime: 2020-03-28 12:09:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \miniprogram\pages\index\index.js
@@ -13,24 +13,17 @@ import { newsList } from '../../mock/data'
 
 Page({
   data: {
-    newsList: 6,
-    loading: true,
+    newsList: [],
     searchText: '',
   },
+
   onShow(){
     let _this = this
     setTimeout(function(){
       _this.setData({
-        loading: false,
         newsList: newsList.filter(item => item.type==='gz')
       })
     }, 800)
-  },
-
-  handleChange ({ detail }) {
-    this.setData({
-      current: detail.key
-    });
   },
 
   changeSearchValue: function(e){
@@ -55,17 +48,5 @@ Page({
       imageUrl: '/image/share.jpg' 
     }
   },
-
-  onClick(){
-
-  },
-
-  onChange(){
-
-  },
-
-  onSearch(){
-    
-  }
 
 })
