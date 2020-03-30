@@ -24,19 +24,15 @@
         position="bottom"
         custom-style="height: 20%"
         bind:close="onClose">
-        <van-grid clickable column-num="2" border="{{false}}">
-            <van-grid-item
-                icon="free-postage"
-                link-type="navigateTo"
-                url="/pages/index/index"
-                text="微信好友"
-            />
-            <van-grid-item
-                icon="hot-o"
-                link-type="reLaunch"
-                url="/pages/index/index"
-                text="朋友圈"
-            />
-        </van-grid>
+        <view class="share-box">
+            <view class="share-item">
+                <view><image src="../../image/wx.png" mode="widthFix"/></view>
+                <text>微信好友</text>
+            </view>
+            <view class="share-item">
+                <view><image src="../../image/pyq.png"  mode="widthFix"/></view>
+                <text>朋友圈</text>
+            </view>
+        </view>
     </van-popup>
 </view>

@@ -21,5 +21,43 @@
 			<view class="p">据悉，下一步，四川将抓紧下达用好疫情防控专项补助，推动重大项目复工强度尽快恢复到正常水平，并进一步优化审批服务、加强要素保障，加大重点项目储备，加快新项目开工，及时协调解决项目建设存在的困难和问题，推动全省固定资产投资持续平稳增长。</view>
 			<view class="read-number">18万阅读</view>
 		</view>
+		<van-row class="btn-op-row">
+			<van-col span="6">
+				<van-button round plain type="info" size="mini" color="#333"><van-icon name="good-job-o" />点赞</van-button>
+			</van-col>
+			<van-col span="6">
+				<van-button round plain type="info" size="mini" color="#333"><van-icon name="delete" />不喜欢</van-button>
+			</van-col>
+			<van-col span="6">
+				<van-button round plain type="info" size="mini" color="#333"><van-icon name="chat-o" />微信</van-button>
+			</van-col>
+			<van-col span="6">
+				<van-button round plain type="info" size="mini" color="#333"><van-icon name="medal-o" />朋友圈</van-button>
+			</van-col>
+		</van-row>
+		<view class="comment-wrapper">
+			<view class="comment-box" wx:for="{{3}}" wx:key="item">
+				<van-row>
+					<van-col span="20">
+						<van-image
+							style="float:left;"
+							round
+							width="60rpx"
+							height="60rpx"
+							src="https://img.yzcdn.cn/vant/cat.jpeg"
+						/>
+						<text class="user-name">皓诚先生</text>
+					</van-col>
+					<van-col span="4" style="text-align: right;"><van-icon name="good-job-o" /></van-col>
+				</van-row>
+				<view class="comment-content">这是一条评论，作者说的太对了，点个赞，已经转发，大家要多多支持奥。。。。</view>
+				<van-row>
+					<van-col span="20" class="comment-time">
+						2分钟前 25回复
+					</van-col>
+					<van-col span="4" style="text-align: right;"><van-icon name="delete" /></van-col>
+				</van-row>
+			</view>
+		</view>
 	</view>
 </view>

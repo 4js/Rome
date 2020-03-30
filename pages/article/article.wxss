@@ -67,3 +67,47 @@
     font-size: 18rpx;
     color: #ccc;
 }
+
+
+.btn-op-row .van-row{
+    width: 600rpx;
+    margin: 0 auto;
+    padding: 60rpx 0 ;
+    text-align: center;
+}
+
+
+/*评论框*/
+
+.comment-wrapper{
+    padding-top: 20rpx;
+}
+
+.comment-box{
+    border-bottom: 1px solid #ccc;
+    padding: 40rpx 0 20rpx;
+}
+
+.comment-box .van-image{
+    margin-right: 16rpx;
+}
+
+.comment-box .user-name{
+    float: left;
+    font-size: 30rpx;
+    line-height: 60rpx;
+}
+
+
+.comment-box .comment-content{
+    margin-top: 20rpx;
+    font-size: 32rpx;
+    line-height: 46rpx;
+}
+
+.comment-box .comment-time{
+    font-size: 24rpx;
+    margin-top: 30rpx;
+    line-height: 46rpx;
+    color: #ccc;
+}

@@ -49,13 +49,21 @@
 }
 
 /* 分享 */
-.share-row{
-    width: 100%;
-}
-.share-col{
-    width: 30%;
+.share-box{
+    padding-top: 60rpx;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
-.van-grid-item__content{
-    padding-top: 60rpx;
+.share-item{
+    flex: 1;
+}
+
+.share-item image{
+    width: 80rpx;
+}
+
+.share-item text{
+    font-size: 24rpx;
 }
