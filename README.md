@@ -14,6 +14,12 @@
 
 > 主题颜色色值-#4caf50
 
+### 命名规则
+
+数组：list
+对象: obj
+字符串: str
+
 ### 功能设计
 
 --|首页
@@ -27,3 +33,4 @@
 
 ### UI库-vantUI
 
+[组件库地址]('https://youzan.github.io/vant-weapp/#/intro')
