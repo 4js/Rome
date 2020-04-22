@@ -1,4 +1,4 @@
-/* components/list-item/list-item.wxss */
+/* components/news-list/news-list.wxss */
 
 .pannel{
   margin: 0 40rpx;

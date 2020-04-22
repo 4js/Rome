@@ -12,7 +12,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    listData: {
+    dataList: {
       type: Array,
       value: []
     }
@@ -26,8 +26,8 @@ Component({
   },
 
   observers: {
-    'listData': function (val) {
-      val.length && this.setData({
+    'dataList': function (newval) {
+      newval.length && this.setData({
         loading: false
       })
     }

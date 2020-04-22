@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "van-skeleton": "@vant/weapp/skeleton",
-    "list-item": "../components/list-item/list-item"
-  }
-}

@@ -9,29 +9,29 @@
 //index.js
 //获取应用实例
 const app = getApp()
-import { newsList } from '../../mock/data'
+// import { newsList } from '../../mock/data'
 import { getArticleAll } from '../../api/api.js'
 
 Page({
   data: {
-    newsList: [],
+    articleList: [],
     searchText: '',
   },
 
   onShow() {
-    // getArticleAll({ "type": 2 }).then(d => {
-      
-    //   this.setData({
-
-    //   })
-    // })
-
-    let _this = this
-    setTimeout(function(){
-      _this.setData({
-        newsList: newsList.filter(item => item.type==='gz')
+    getArticleAll({ "type": 2 }).then(res => {
+      console.log(res)
+      this.setData({
+        articleList: res
       })
-    }, 800)
+    })
+
+    // let _this = this
+    // setTimeout(function(){
+    //   _this.setData({
+    //     newsList: newsList.filter(item => item.type==='gz')
+    //   })
+    // }, 800)
   },
 
   changeSearchValue: function (e) {
@@ -46,7 +46,7 @@ Page({
     const currentKey = keyList[e.detail.name]
     const currentArr = newsList.filter(item => item.type === currentKey)
     this.setData({
-      newsList: currentArr
+      articleList: currentArr
     })
   },
 
