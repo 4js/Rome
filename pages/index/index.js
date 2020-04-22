@@ -10,6 +10,7 @@
 //获取应用实例
 const app = getApp()
 import { newsList } from '../../mock/data'
+import { getArticleAll } from '../../api/api.js'
 
 Page({
   data: {
@@ -17,7 +18,14 @@ Page({
     searchText: '',
   },
 
-  onShow(){
+  onShow() {
+    // getArticleAll({ "type": 2 }).then(d => {
+      
+    //   this.setData({
+
+    //   })
+    // })
+
     let _this = this
     setTimeout(function(){
       _this.setData({
@@ -26,26 +34,26 @@ Page({
     }, 800)
   },
 
-  changeSearchValue: function(e){
+  changeSearchValue: function (e) {
     this.setData({
       searchText: e.detail.detail.value
     })
   },
 
   // 切换tab
-  changeTab(e){
-    const keyList = ['gz','tj','rd','fp','zc','js']
+  changeTab(e) {
+    const keyList = ['gz', 'tj', 'rd', 'fp', 'zc', 'js']
     const currentKey = keyList[e.detail.name]
-    const currentArr = newsList.filter(item => item.type===currentKey)
+    const currentArr = newsList.filter(item => item.type === currentKey)
     this.setData({
       newsList: currentArr
     })
   },
 
-  onShareAppMessage(){
+  onShareAppMessage() {
     return {
       title: '农咨网',
-      imageUrl: '/image/share.jpg' 
+      imageUrl: '/image/share.jpg'
     }
   },
 
