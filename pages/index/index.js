@@ -14,15 +14,14 @@ import { getArticleAll } from '../../api/api.js'
 
 Page({
   data: {
-    articleList: [],
+    list: [],
     searchText: '',
   },
 
   onShow() {
-    getArticleAll({ "type": 2 }).then(res => {
-      console.log(res)
+    getArticleAll({ type: 2 }).then(res => {
       this.setData({
-        articleList: res
+        list: res
       })
     })
 
@@ -34,6 +33,7 @@ Page({
     // }, 800)
   },
 
+  // 搜索框input事件 后期要加防抖
   changeSearchValue: function (e) {
     this.setData({
       searchText: e.detail.detail.value
@@ -42,12 +42,13 @@ Page({
 
   // 切换tab
   changeTab(e) {
-    const keyList = ['gz', 'tj', 'rd', 'fp', 'zc', 'js']
-    const currentKey = keyList[e.detail.name]
-    const currentArr = newsList.filter(item => item.type === currentKey)
-    this.setData({
-      articleList: currentArr
-    })
+    console.log(e)
+    // const keyList = ['gz', 'tj', 'rd', 'fp', 'zc', 'js']
+    // const currentKey = keyList[e.detail.name]
+    // const currentArr = newsList.filter(item => item.type === currentKey)
+    // this.setData({
+    //   list: currentArr
+    // })
   },
 
   onShareAppMessage() {

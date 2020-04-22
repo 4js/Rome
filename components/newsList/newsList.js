@@ -12,7 +12,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    dataList: {
+    // 数组列表
+    list: {
       type: Array,
       value: []
     }
@@ -26,7 +27,9 @@ Component({
   },
 
   observers: {
-    'dataList': function (newval) {
+    'list': function (newval) {
+      console.log(newval)
+      // 监听传参 如果有列表去除loading
       newval.length && this.setData({
         loading: false
       })

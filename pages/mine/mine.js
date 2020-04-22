@@ -25,6 +25,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 全局数据
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -44,6 +45,7 @@ Page({
       wx.getUserInfo({
         lang:'zh_CN',
         success: res => {
+          // 把用户信息存到全局
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo,
@@ -54,7 +56,7 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
+    // 把用户信息存到全局
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

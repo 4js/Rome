@@ -1,6 +1,5 @@
-<!--components/news-list/news-list.wxml-->
 <view>
-    <view wx:if="{{!dataList.length}}">
+    <view wx:if="{{list.length===0}}">
         <van-skeleton
             title
             row="3"
@@ -9,7 +8,7 @@
             wx:key="item"/>
     </view>
     <view wx:else>
-        <navigator wx:for="{{dataList}}" wx:key="item" url="/pages/article/article" class="pannel">
+        <navigator wx:for="{{list}}" wx:key="item" url="/pages/article/article" class="pannel">
             <view class="pannel-header">
                 <view class="pannel-title">{{item.title}}</view>
                 <image wx:if="{{!item.face3_url}}" class="pannel-img" src="{{item.face1_url}}"/>

@@ -23,23 +23,22 @@
   padding-left: 26rpx;
 }
 
+/** 图片模块  **/
+
 .img-wrapper{
   display: flex;
   justify-content: space-between;
 }
-
 .img-wrapper .img-item{
   width: 220rpx;
   height: 140rpx;
 }
-
 .pannel-footer{
   margin-top: 10rpx;
   font-size: 20rpx;
   color: #ababab;
   line-height: 20rpx;
 }
-
 .pannel-footer text{
   padding-right: 20rpx;
 } 

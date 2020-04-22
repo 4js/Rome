@@ -20,6 +20,6 @@
     <van-tab title="技术"></van-tab>
   </van-tabs>
   <view class="news-list-box">
-    <news-list dataList="{{articleList}}"></news-list>
+    <news-list list="{{list}}"></news-list>
   </view>
 </view>
