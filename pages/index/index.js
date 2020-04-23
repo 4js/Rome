@@ -23,7 +23,7 @@ Page({
       this.setData({
         list: res
       })
-    })
+    }).catch(err => {console.log(err)})
 
     // let _this = this
     // setTimeout(function(){
