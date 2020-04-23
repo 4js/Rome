@@ -9,28 +9,25 @@
 //index.js
 //获取应用实例
 const app = getApp()
-// import { newsList } from '../../mock/data'
 import { getArticleAll } from '../../api/api.js'
 
 Page({
   data: {
+    tags: [{ title: "推荐" }, { title: "热点" }, { title: "扶贫" }, { title: "政策" }, { title: "技术" }],
     list: [],
     searchText: '',
   },
 
   onShow() {
-    getArticleAll({ type: 2 }).then(res => {
+     this.loadData(1);
+  },
+
+  loadData:function(type){
+    getArticleAll({ type: type }).then(res => {
       this.setData({
         list: res
       })
     })
-
-    // let _this = this
-    // setTimeout(function(){
-    //   _this.setData({
-    //     newsList: newsList.filter(item => item.type==='gz')
-    //   })
-    // }, 800)
   },
 
   // 搜索框input事件 后期要加防抖
@@ -43,12 +40,8 @@ Page({
   // 切换tab
   changeTab(e) {
     console.log(e)
-    // const keyList = ['gz', 'tj', 'rd', 'fp', 'zc', 'js']
-    // const currentKey = keyList[e.detail.name]
-    // const currentArr = newsList.filter(item => item.type === currentKey)
-    // this.setData({
-    //   list: currentArr
-    // })
+    const currentIndex = keyList[e.detail.index];
+    this.loadData(currentIndex);
   },
 
   onShareAppMessage() {
