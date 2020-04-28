@@ -27,6 +27,8 @@ Page({
       this.setData({
         list: res
       })
+    }).catch(err => {
+      console.log(err)
     })
   },
 
@@ -40,7 +42,7 @@ Page({
   // 切换tab
   changeTab(e) {
     console.log(e)
-    const currentIndex = keyList[e.detail.index];
+    const currentIndex = e.detail.index;
     this.loadData(currentIndex);
   },
 
