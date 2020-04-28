@@ -1,13 +1,13 @@
 <!--index.wxml-->
 <view class="container">
-	<van-search class="bx search-box" value="{{ value }}" placeholder="请输入搜索内容" use-action-slot background="rgb(79, 192, 141)" bind:change="onChange" bind:search="onSearch">
+	<van-search class="bx search-box" value="{{ value }}" placeholder="请输入搜索内容" use-action-slot background="#32CD32" bind:change="onChange" bind:search="onSearch" shape="round">
 	</van-search>
 
-	<van-tabs animated sticky class="bx tab-box" color="rgb(79, 192, 141)" bind:change="changeTab">
-		<van-tab wx:for="{{tags}}" wx:key="index" wx:for-item="item" title="{{item.title}}"></van-tab>
+	<van-tabs swipeable animated sticky class="bx tab-box" color="#32CD32" bind:change="changeTab">
+		<van-tab wx:for="{{tags}}" wx:key="index" wx:for-item="item" title="{{item.title}}">
+			<view class="news-list-box">
+				<news-list list="{{list}}"></news-list>
+			</view>
+		</van-tab>
 	</van-tabs>
-
-	<view class="news-list-box">
-		<news-list list="{{list}}"></news-list>
-	</view>
 </view>

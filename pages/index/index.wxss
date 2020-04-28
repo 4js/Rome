@@ -14,7 +14,6 @@
 
 .news-list-box{
   width: 100%;
-  padding-top: 200rpx;
 }
 
 .btn-search{

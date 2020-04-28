@@ -1,4 +1,6 @@
 // pages/article.js
+
+import { getArticleByID } from '../../api/api.js'
 Page({
 
   /**
@@ -8,11 +10,22 @@ Page({
 
   },
 
+  getArticleByID:function(id){
+    getArticleByID({ article_id: id}).then(res => {
+      console.log(res);
+      this.setData({
+        
+      })
+    }).catch(err => {
+      console.log(err)
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    getArticleByID(1);
   },
 
   /**

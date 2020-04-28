@@ -22,6 +22,10 @@ Page({
      this.loadData(1);
   },
 
+  /**
+   * 获取所有文章
+   * @param {1推荐 2热点 3扶贫 4政策 5技术} type 
+   */
   loadData:function(type){
     getArticleAll({ type: type }).then(res => {
       this.setData({
@@ -32,17 +36,23 @@ Page({
     })
   },
 
-  // 搜索框input事件 后期要加防抖
+  /**
+   * 搜索框input事件 后期要加防抖
+   * @param {*} e 
+   */
   changeSearchValue: function (e) {
     this.setData({
       searchText: e.detail.detail.value
     })
   },
 
-  // 切换tab
+  /**
+   * 切换tab
+   * @param {*} e 
+   */
   changeTab(e) {
     console.log(e)
-    const currentIndex = e.detail.index;
+    const currentIndex = e.detail.index+1;
     this.loadData(currentIndex);
   },
 
