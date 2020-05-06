@@ -16,18 +16,26 @@ Page({
     tags: [{ title: "推荐" }, { title: "热点" }, { title: "扶贫" }, { title: "政策" }, { title: "技术" }],
     list: [],
     searchText: '',
+    pageNum: 1,
+    pageSize: 20,
+    currentIndex: 0,
+  },
+
+  onLoad() {
+    wx.stopPullDownRefresh() //刷新完成后停止下拉刷新动效
   },
 
   onShow() {
-     this.loadData(1);
+    this.data.currentIndex = 1;
+    this.loadData(this.data.currentIndex);
   },
 
   /**
    * 获取所有文章
    * @param {1推荐 2热点 3扶贫 4政策 5技术} type 
    */
-  loadData:function(type){
-    getArticleAll({ type: type }).then(res => {
+  loadData: function (type) {
+    getArticleAll({ type: type, page: this.data.pageNum, pageSize: this.data.pageSize }).then(res => {
       this.setData({
         list: res
       })
@@ -52,8 +60,27 @@ Page({
    */
   changeTab(e) {
     console.log(e)
-    const currentIndex = e.detail.index+1;
+    const currentIndex = e.detail.index + 1;
+    this.data.currentIndex = currentIndex;
     this.loadData(currentIndex);
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    console.log("onPullDownRefresh---下拉动作");
+    this.data.pageNum = 1;
+    this.loadData(this.data.currentIndex);
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    console.log("onReachBottom---上拉加载")
+    this.data.pageNum += 1;
+    this.loadData(this.data.currentIndex);
   },
 
   onShareAppMessage() {
@@ -62,5 +89,4 @@ Page({
       imageUrl: '/image/share.jpg'
     }
   },
-
 })

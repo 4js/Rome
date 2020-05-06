@@ -5,9 +5,9 @@
 
 	<van-tabs swipeable animated sticky class="bx tab-box" color="#32CD32" bind:change="changeTab">
 		<van-tab wx:for="{{tags}}" wx:key="index" wx:for-item="item" title="{{item.title}}">
-			<view class="news-list-box">
+			<scroll-view class="news-list-box">
 				<news-list list="{{list}}"></news-list>
-			</view>
+			</scroll-view>
 		</van-tab>
 	</van-tabs>
 </view>
